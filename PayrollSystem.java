@@ -10,7 +10,7 @@ public class PayrollSystem extends JFrame {
     private PayrollConfig payrollConfig;
     private int loginAttempts = 0;
     private static final int MAX_LOGIN_ATTEMPTS = 3;
-    
+
     // Professional Color Scheme
     private static final Color PRIMARY_COLOR = new Color(41, 128, 185);      // Professional Blue
     private static final Color SECONDARY_COLOR = new Color(52, 152, 219);    // Light Blue
@@ -57,21 +57,21 @@ public class PayrollSystem extends JFrame {
         button.setCursor(new Cursor(Cursor.HAND_CURSOR));
         button.setContentAreaFilled(true);
         button.setOpaque(true);
-        
+
         // Hover effect
         button.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 button.setBackground(new Color(
-                    Math.max(0, bgColor.getRed() - 30),
-                    Math.max(0, bgColor.getGreen() - 30),
-                    Math.max(0, bgColor.getBlue() - 30)
+                        Math.max(0, bgColor.getRed() - 30),
+                        Math.max(0, bgColor.getGreen() - 30),
+                        Math.max(0, bgColor.getBlue() - 30)
                 ));
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 button.setBackground(bgColor);
             }
         });
-        
+
         return button;
     }
 
@@ -93,7 +93,7 @@ public class PayrollSystem extends JFrame {
         gbc.fill = GridBagConstraints.HORIZONTAL;
 
         // Title
-        JLabel titleLabel = new JLabel("🔐 PAYROLL SYSTEM");
+        JLabel titleLabel = new JLabel("PAYROLL SYSTEM");
         titleLabel.setFont(new Font("Segoe UI", Font.BOLD, 26));
         titleLabel.setForeground(PRIMARY_COLOR);
         gbc.gridx = 0;
@@ -111,7 +111,7 @@ public class PayrollSystem extends JFrame {
 
         // Username Label
         gbc.insets = new Insets(15, 15, 5, 15);
-        JLabel userLabel = new JLabel("👤 Username");
+        JLabel userLabel = new JLabel("Username");
         userLabel.setFont(new Font("Segoe UI", Font.BOLD, 12));
         userLabel.setForeground(DARK_TEXT);
         gbc.gridx = 0;
@@ -129,7 +129,7 @@ public class PayrollSystem extends JFrame {
 
         // Password Label
         gbc.insets = new Insets(15, 15, 5, 15);
-        JLabel passLabel = new JLabel("🔑 Password");
+        JLabel passLabel = new JLabel("Password");
         passLabel.setFont(new Font("Segoe UI", Font.BOLD, 12));
         passLabel.setForeground(DARK_TEXT);
         gbc.gridy = 4;
@@ -152,7 +152,7 @@ public class PayrollSystem extends JFrame {
         centerPanel.add(loginBtn, gbc);
 
         // Attempt Label
-        JLabel attemptLabel = new JLabel("🔔 Attempts: " + loginAttempts + "/" + MAX_LOGIN_ATTEMPTS);
+        JLabel attemptLabel = new JLabel("Attempts: " + loginAttempts + "/" + MAX_LOGIN_ATTEMPTS);
         attemptLabel.setFont(new Font("Segoe UI", Font.ITALIC, 10));
         attemptLabel.setForeground(new Color(127, 140, 141));
         gbc.gridy = 7;
@@ -174,13 +174,13 @@ public class PayrollSystem extends JFrame {
                 passField.setText("");
             } else {
                 loginAttempts++;
-                attemptLabel.setText("🔔 Attempts: " + loginAttempts + "/" + MAX_LOGIN_ATTEMPTS);
-                JOptionPane.showMessageDialog(mainPanel, "❌ Invalid credentials!", 
-                                            "Login Failed", JOptionPane.ERROR_MESSAGE);
+                attemptLabel.setText("Attempts: " + loginAttempts + "/" + MAX_LOGIN_ATTEMPTS);
+                JOptionPane.showMessageDialog(mainPanel, "❌ Invalid credentials!",
+                        "Login Failed", JOptionPane.ERROR_MESSAGE);
 
                 if (loginAttempts >= MAX_LOGIN_ATTEMPTS) {
-                    JOptionPane.showMessageDialog(mainPanel, "🔒 System locked. Please restart.", 
-                                                "Security Alert", JOptionPane.WARNING_MESSAGE);
+                    JOptionPane.showMessageDialog(mainPanel, "🔒 System locked. Please restart.",
+                            "Security Alert", JOptionPane.WARNING_MESSAGE);
                     System.exit(0);
                 }
             }
@@ -200,7 +200,7 @@ public class PayrollSystem extends JFrame {
         headerPanel.setBackground(PRIMARY_COLOR);
         headerPanel.setLayout(new FlowLayout(FlowLayout.LEFT, 30, 20));
         headerPanel.setPreferredSize(new Dimension(0, 80));
-        JLabel headerLabel = new JLabel("📊 DASHBOARD");
+        JLabel headerLabel = new JLabel("DASHBOARD");
         headerLabel.setFont(new Font("Segoe UI", Font.BOLD, 28));
         headerLabel.setForeground(LIGHT_TEXT);
         headerPanel.add(headerLabel);
@@ -211,16 +211,16 @@ public class PayrollSystem extends JFrame {
         contentPanel.setBackground(BACKGROUND);
         contentPanel.setLayout(new GridBagLayout());
         contentPanel.setBorder(BorderFactory.createEmptyBorder(40, 40, 40, 40));
-        
+
         GridBagConstraints gbc = new GridBagConstraints();
         gbc.insets = new Insets(15, 15, 15, 15);
 
         // Dashboard buttons
-        String[] buttonLabels = {"👥 Employee\nManagement", "💰 Payroll\nProcessing", 
-                                "⚙️ Configuration", "🚪 Logout"};
+        String[] buttonLabels = {"Employee Management", "Payroll Processing",
+                "Configuration", "Logout"};
         Color[] buttonColors = {SECONDARY_COLOR, SECONDARY_COLOR, SECONDARY_COLOR, DANGER_COLOR};
         JButton[] buttons = new JButton[4];
-        
+
         for (int i = 0; i < 2; i++) {
             for (int j = 0; j < 2; j++) {
                 int index = i * 2 + j;
@@ -255,7 +255,7 @@ public class PayrollSystem extends JFrame {
         button.setBorder(new LineBorder(PRIMARY_COLOR, 2));
         button.setCursor(new Cursor(Cursor.HAND_CURSOR));
         button.setOpaque(true);
-        
+
         button.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 button.setBackground(PRIMARY_COLOR);
@@ -264,7 +264,7 @@ public class PayrollSystem extends JFrame {
                 button.setBackground(color);
             }
         });
-        
+
         return button;
     }
 
@@ -278,7 +278,7 @@ public class PayrollSystem extends JFrame {
         headerPanel.setBackground(PRIMARY_COLOR);
         headerPanel.setLayout(new FlowLayout(FlowLayout.LEFT, 30, 15));
         headerPanel.setPreferredSize(new Dimension(0, 70));
-        JLabel headerLabel = new JLabel("👥 EMPLOYEE MANAGEMENT");
+        JLabel headerLabel = new JLabel("EMPLOYEE MANAGEMENT");
         headerLabel.setFont(new Font("Segoe UI", Font.BOLD, 24));
         headerLabel.setForeground(LIGHT_TEXT);
         headerPanel.add(headerLabel);
@@ -377,8 +377,8 @@ public class PayrollSystem extends JFrame {
         JPanel buttonPanel = new JPanel(new FlowLayout(FlowLayout.CENTER, 15, 15));
         buttonPanel.setBackground(BACKGROUND);
 
-        JButton addBtn = createButton("✓ Add Employee", SUCCESS_COLOR, LIGHT_TEXT);
-        JButton viewBtn = createButton("📋 View All", PRIMARY_COLOR, LIGHT_TEXT);
+        JButton addBtn = createButton("Add Employee", SUCCESS_COLOR, LIGHT_TEXT);
+        JButton viewBtn = createButton("View All", PRIMARY_COLOR, LIGHT_TEXT);
         JButton backBtn = createButton("← Back", DANGER_COLOR, LIGHT_TEXT);
 
         buttonPanel.add(addBtn);
@@ -397,8 +397,8 @@ public class PayrollSystem extends JFrame {
                 String type = (String) typeBox.getSelectedItem();
 
                 if (id.isEmpty() || name.isEmpty() || designation.isEmpty()) {
-                    JOptionPane.showMessageDialog(panel, "❌ Please fill all fields!", 
-                                                "Input Error", JOptionPane.WARNING_MESSAGE);
+                    JOptionPane.showMessageDialog(panel, "❌ Please fill all fields!",
+                            "Input Error", JOptionPane.WARNING_MESSAGE);
                     return;
                 }
 
@@ -410,21 +410,21 @@ public class PayrollSystem extends JFrame {
                 }
 
                 employees.put(id, emp);
-                JOptionPane.showMessageDialog(panel, "✓ Employee added successfully!", 
-                                            "Success", JOptionPane.INFORMATION_MESSAGE);
+                JOptionPane.showMessageDialog(panel, "✓ Employee added successfully!",
+                        "Success", JOptionPane.INFORMATION_MESSAGE);
                 idField.setText("");
                 nameField.setText("");
                 designationField.setText("");
                 salaryField.setText("");
-                
+
                 // Refresh payroll panel dropdown
                 updatePayrollEmployeeList();
             } catch (InvalidEmployeeException ex) {
-                JOptionPane.showMessageDialog(panel, "Error: " + ex.getMessage(), 
-                                            "Invalid Input", JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(panel, "Error: " + ex.getMessage(),
+                        "Invalid Input", JOptionPane.ERROR_MESSAGE);
             } catch (NumberFormatException ex) {
-                JOptionPane.showMessageDialog(panel, "❌ Invalid salary format!", 
-                                            "Input Error", JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(panel, "❌ Invalid salary format!",
+                        "Input Error", JOptionPane.ERROR_MESSAGE);
             }
         });
 
@@ -432,8 +432,8 @@ public class PayrollSystem extends JFrame {
             displayArea.setText("");
             if (employees.isEmpty()) {
                 displayArea.setText("╔══════════════════════════════════════╗\n" +
-                                  "║      No employees found              ║\n" +
-                                  "╚══════════════════════════════════════╝");
+                        "║      No employees found              ║\n" +
+                        "╚══════════════════════════════════════╝");
             } else {
                 displayArea.setText("╔══════════════════════════════════════════════════════════╗\n");
                 displayArea.append("║                    EMPLOYEE LIST                         ║\n");
@@ -453,7 +453,7 @@ public class PayrollSystem extends JFrame {
 
     // Store reference for updating payroll list
     private JComboBox<String> payrollEmpBox;
-    
+
     private void updatePayrollEmployeeList() {
         if (payrollEmpBox != null) {
             payrollEmpBox.removeAllItems();
@@ -473,7 +473,7 @@ public class PayrollSystem extends JFrame {
         headerPanel.setBackground(PRIMARY_COLOR);
         headerPanel.setLayout(new FlowLayout(FlowLayout.LEFT, 30, 15));
         headerPanel.setPreferredSize(new Dimension(0, 70));
-        JLabel headerLabel = new JLabel("💰 PAYROLL PROCESSING");
+        JLabel headerLabel = new JLabel("PAYROLL PROCESSING");
         headerLabel.setFont(new Font("Segoe UI", Font.BOLD, 24));
         headerLabel.setForeground(LIGHT_TEXT);
         headerPanel.add(headerLabel);
@@ -484,7 +484,7 @@ public class PayrollSystem extends JFrame {
         contentPanel.setBackground(BACKGROUND);
         contentPanel.setBorder(BorderFactory.createEmptyBorder(20, 20, 20, 20));
 
-        // Input section - FIXED
+        // Input section
         JPanel inputPanel = new JPanel();
         inputPanel.setBackground(Color.WHITE);
         inputPanel.setLayout(new GridBagLayout());
@@ -560,7 +560,7 @@ public class PayrollSystem extends JFrame {
         JPanel buttonPanel = new JPanel(new FlowLayout(FlowLayout.CENTER, 15, 15));
         buttonPanel.setBackground(BACKGROUND);
 
-        JButton calculateBtn = createButton("💻 Calculate", SUCCESS_COLOR, LIGHT_TEXT);
+        JButton calculateBtn = createButton("Calculate", SUCCESS_COLOR, LIGHT_TEXT);
         JButton backBtn = createButton("← Back", DANGER_COLOR, LIGHT_TEXT);
 
         buttonPanel.add(calculateBtn);
@@ -576,8 +576,8 @@ public class PayrollSystem extends JFrame {
             try {
                 String empId = (String) payrollEmpBox.getSelectedItem();
                 if (empId == null || empId.isEmpty()) {
-                    JOptionPane.showMessageDialog(panel, "❌ Add an employee first!", 
-                                                "No Data", JOptionPane.INFORMATION_MESSAGE);
+                    JOptionPane.showMessageDialog(panel, "❌ Add an employee first!",
+                            "No Data", JOptionPane.INFORMATION_MESSAGE);
                     return;
                 }
 
@@ -589,7 +589,7 @@ public class PayrollSystem extends JFrame {
                 double salary = emp.calculateSalary(hours, deduction, bonus);
 
                 displayArea.setText("╔═══════════════════════════════════════════╗\n");
-                displayArea.append("║           ✓ PAYROLL SLIP                ║\n");
+                displayArea.append("║           ✓ PAYROLL SLIP                  ║\n");
                 displayArea.append("╚═══════════════════════════════════════════╝\n\n");
                 displayArea.append("Employee Name    : " + emp.getName() + "\n");
                 displayArea.append("Employee ID      : " + emp.getId() + "\n");
@@ -602,11 +602,11 @@ public class PayrollSystem extends JFrame {
                 displayArea.append("💰 NET SALARY    : PHP " + String.format("%,.2f", salary) + "\n");
                 displayArea.append("═══════════════════════════════════════════\n");
             } catch (PayrollCalculationException ex) {
-                JOptionPane.showMessageDialog(panel, "Error: " + ex.getMessage(), 
-                                            "Calculation Error", JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(panel, "Error: " + ex.getMessage(),
+                        "Calculation Error", JOptionPane.ERROR_MESSAGE);
             } catch (NumberFormatException ex) {
-                JOptionPane.showMessageDialog(panel, "❌ Invalid input format!", 
-                                            "Input Error", JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(panel, "❌ Invalid input format!",
+                        "Input Error", JOptionPane.ERROR_MESSAGE);
             }
         });
 
@@ -649,7 +649,7 @@ public class PayrollSystem extends JFrame {
         cardGbc.insets = new Insets(15, 15, 15, 15);
         cardGbc.fill = GridBagConstraints.HORIZONTAL;
 
-        JLabel taxLabel = new JLabel("📊 Tax Rate (%):");
+        JLabel taxLabel = new JLabel("Tax Rate (%):");
         taxLabel.setFont(new Font("Segoe UI", Font.BOLD, 12));
         taxLabel.setForeground(DARK_TEXT);
         cardGbc.gridx = 0;
@@ -663,7 +663,7 @@ public class PayrollSystem extends JFrame {
         cardGbc.gridy = 1;
         configCard.add(taxField, cardGbc);
 
-        JLabel sssLabel = new JLabel("💳 SSS Contribution (PHP):");
+        JLabel sssLabel = new JLabel("SSS Contribution (PHP):");
         sssLabel.setFont(new Font("Segoe UI", Font.BOLD, 12));
         sssLabel.setForeground(DARK_TEXT);
         cardGbc.gridy = 2;
@@ -676,7 +676,7 @@ public class PayrollSystem extends JFrame {
         cardGbc.gridy = 3;
         configCard.add(sssField, cardGbc);
 
-        JButton saveBtn = createButton("✓ Save Changes", SUCCESS_COLOR, LIGHT_TEXT);
+        JButton saveBtn = createButton("    Save Changes", SUCCESS_COLOR, LIGHT_TEXT);
         saveBtn.setPreferredSize(new Dimension(420, 50));
         cardGbc.gridy = 4;
         cardGbc.insets = new Insets(30, 15, 15, 15);
@@ -699,14 +699,14 @@ public class PayrollSystem extends JFrame {
                 double tax = Double.parseDouble(taxField.getText().trim()) / 100;
                 double sss = Double.parseDouble(sssField.getText().trim());
                 payrollConfig.setConfig(tax, sss);
-                JOptionPane.showMessageDialog(panel, "✓ Configuration saved successfully!", 
-                                            "Success", JOptionPane.INFORMATION_MESSAGE);
+                JOptionPane.showMessageDialog(panel, "✓ Configuration saved successfully!",
+                        "Success", JOptionPane.INFORMATION_MESSAGE);
             } catch (PayrollCalculationException ex) {
-                JOptionPane.showMessageDialog(panel, "Error: " + ex.getMessage(), 
-                                            "Configuration Error", JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(panel, "Error: " + ex.getMessage(),
+                        "Configuration Error", JOptionPane.ERROR_MESSAGE);
             } catch (NumberFormatException ex) {
-                JOptionPane.showMessageDialog(panel, "❌ Invalid input format!", 
-                                            "Input Error", JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(panel, "❌ Invalid input format!",
+                        "Input Error", JOptionPane.ERROR_MESSAGE);
             }
         });
 
