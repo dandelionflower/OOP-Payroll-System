@@ -219,5 +219,3 @@ Created as an educational project to demonstrate OOP principles in Java.
 This project is free to use for educational purposes.
 
 ---
-
-**Happy Learning! 🎉**
