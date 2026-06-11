@@ -215,7 +215,7 @@ public class PayrollSystem extends JFrame {
         GridBagConstraints gbc = new GridBagConstraints();
         gbc.insets = new Insets(15, 15, 15, 15);
 
-        // Dashboard buttons
+        // Dashboard Label buttons
         String[] buttonLabels = {"Employee Management", "Payroll Processing",
                 "Configuration", "Logout"};
         Color[] buttonColors = {SECONDARY_COLOR, SECONDARY_COLOR, SECONDARY_COLOR, DANGER_COLOR};
