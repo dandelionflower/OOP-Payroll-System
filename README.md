@@ -77,6 +77,7 @@ The GUI window will open with the login screen.
 - **Password**: `admin123`
 
 **Note**: Failed login attempts are limited to 3. After 3 failed attempts, the system will lock.
+**Note**: You can change the login credential in line 170 in the **_PayrollSystem.java_**
 
 ---
 
