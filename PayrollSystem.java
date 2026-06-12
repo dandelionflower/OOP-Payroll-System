@@ -120,7 +120,7 @@ public class PayrollSystem extends JFrame {
         centerPanel.add(userLabel, gbc);
 
         // Username Field
-        JTextField userField = new JTextField(30);
+        JTextField userField = new JTextField(60);
         userField.setFont(new Font("Segoe UI", Font.PLAIN, 13));
         userField.setBorder(new LineBorder(new Color(189, 195, 199), 1));
         gbc.gridy = 3;
@@ -136,7 +136,7 @@ public class PayrollSystem extends JFrame {
         centerPanel.add(passLabel, gbc);
 
         // Password Field
-        JPasswordField passField = new JPasswordField(30);
+        JPasswordField passField = new JPasswordField(60);
         passField.setFont(new Font("Segoe UI", Font.PLAIN, 13));
         passField.setBorder(new LineBorder(new Color(189, 195, 199), 1));
         gbc.gridy = 5;
@@ -167,7 +167,7 @@ public class PayrollSystem extends JFrame {
             String user = userField.getText();
             String pass = new String(passField.getPassword());
 
-            if (user.equals("admin") && pass.equals("admin123")) {
+            if (user.equals("administrator") && pass.equals("admin0901")) {
                 loginAttempts = 0;
                 cardLayout.show(cardPanel, "DASHBOARD");
                 userField.setText("");
@@ -289,7 +289,7 @@ public class PayrollSystem extends JFrame {
         contentPanel.setBackground(BACKGROUND);
         contentPanel.setBorder(BorderFactory.createEmptyBorder(20, 20, 20, 20));
 
-        // Input section - FIXED
+        // Input section
         JPanel inputPanel = new JPanel();
         inputPanel.setBackground(Color.WHITE);
         inputPanel.setLayout(new GridBagLayout());
@@ -437,7 +437,7 @@ public class PayrollSystem extends JFrame {
             } else {
                 displayArea.setText("╔══════════════════════════════════════════════════════════╗\n");
                 displayArea.append("║                    EMPLOYEE LIST                         ║\n");
-                displayArea.append("╚══════════════════════════════════════════════════���═══════╝\n\n");
+                displayArea.append("╚═════════════════════════════════════════════════════════╝\n\n");
                 int index = 1;
                 for (Employee emp : employees.values()) {
                     displayArea.append(index + ". " + emp.toString() + "\n");
@@ -599,7 +599,7 @@ public class PayrollSystem extends JFrame {
                 displayArea.append("Deductions       : PHP " + String.format("%,.2f", deduction) + "\n");
                 displayArea.append("Bonus            : PHP " + String.format("%,.2f", bonus) + "\n");
                 displayArea.append("═══════════════════════════════════════════\n");
-                displayArea.append("💰 NET SALARY    : PHP " + String.format("%,.2f", salary) + "\n");
+                displayArea.append("        NET SALARY    : PHP " + String.format("%,.2f", salary) + "\n");
                 displayArea.append("═══════════════════════════════════════════\n");
             } catch (PayrollCalculationException ex) {
                 JOptionPane.showMessageDialog(panel, "Error: " + ex.getMessage(),
@@ -625,7 +625,7 @@ public class PayrollSystem extends JFrame {
         headerPanel.setBackground(PRIMARY_COLOR);
         headerPanel.setLayout(new FlowLayout(FlowLayout.LEFT, 30, 15));
         headerPanel.setPreferredSize(new Dimension(0, 70));
-        JLabel headerLabel = new JLabel("⚙️ PAYROLL CONFIGURATION");
+        JLabel headerLabel = new JLabel("PAYROLL CONFIGURATION");
         headerLabel.setFont(new Font("Segoe UI", Font.BOLD, 24));
         headerLabel.setForeground(LIGHT_TEXT);
         headerPanel.add(headerLabel);
