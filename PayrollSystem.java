@@ -167,7 +167,7 @@ public class PayrollSystem extends JFrame {
             String user = userField.getText();
             String pass = new String(passField.getPassword());
 
-            if (user.equals("administrator") && pass.equals("admin0901")) {
+            if (user.equals("admin") && pass.equals("admin123")) {
                 loginAttempts = 0;
                 cardLayout.show(cardPanel, "DASHBOARD");
                 userField.setText("");
