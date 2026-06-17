@@ -10,7 +10,7 @@ A Java-based GUI application demonstrating Object-Oriented Programming (OOP) con
 - **Employee Management**: Add and manage full-time and part-time employees
 - **Payroll Processing**: Calculate salaries based on work hours, deductions, and bonuses
 - **Payroll Configuration**: Configure tax rates and SSS contributions
-- **Responsive CLI**: Simple, clean, and user-friendly interface
+- **Responsive GUI**: Simple, clean, and user-friendly interface
 
 ---
 
@@ -78,7 +78,7 @@ The GUI window will open with the login screen.
 
 **Note**: Failed login attempts are limited to 3. After 3 failed attempts, the system will lock.
 
-**Note**: You can change the login credentials in line 45 in the **_PayrollSystem.java_**
+**Note**: You can change the login credentials in line 170 in the **_PayrollSystem.java_**
 
 ---
 
@@ -187,7 +187,7 @@ You can test with these sample employees:
 - Validates inputs before setting
 
 ### **PayrollSystem**
-- Main CLI application
+- Main GUI application
 - Manages all UI panels (login, dashboard, employee, payroll, config)
 - Handles user interactions and navigation
 
@@ -197,8 +197,7 @@ You can test with these sample employees:
 
 - **Java Version**: Java 8 or higher
 - **IDE**: Any Java IDE (NetBeans, Eclipse, IntelliJ) or command line
-- **Libraries**: None — uses only standard Java (No Swing required)
-
+- **Libraries**: Java Swing (included in JDK)
 
 ---
 
