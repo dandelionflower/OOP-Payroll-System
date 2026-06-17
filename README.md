@@ -152,8 +152,8 @@ After studying this code, you will understand:
 - How to use inheritance and polymorphism effectively
 - How to implement abstract classes and methods
 - How to create custom exceptions
-- How to build a GUI application with Java Swing
-- How to separate concerns (Main class, Model classes, GUI class)
+- How to build a CLI application with Java Scanner
+- How to separate concerns (Main class, Model classes, CLI class)
 
 ---
 
