@@ -189,8 +189,7 @@ You can test with these sample employees:
 ### **PayrollSystem**
 - Main CLI application
 - Manages all UI panels (login, dashboard, employee, payroll, config)
-- Handles user interactions and navigation
-
+- Handles user input and navigation via `Scanner`
 ---
 
 ## 🔧 Requirements
