@@ -216,7 +216,6 @@ Created as an educational project to demonstrate OOP principles in Java.
 
 ---
 
-## 📄 License
 
 This project is free to use for educational purposes.
 
